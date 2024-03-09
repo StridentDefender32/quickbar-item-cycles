@@ -115,7 +115,7 @@ script.on_event(defines.events.on_player_cursor_stack_changed, function(event)
 				end
 				local next_item = i == #cycle and cycle[1] or cycle[i + 1]
 				--print("swapping", next_item)
-				replace_on_quick_bar(player_data, name, next_item)
+				pcall(replace_on_quick_bar, player_data, name, next_item)
 				return
 			end
 		end
